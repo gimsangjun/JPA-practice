@@ -1,5 +1,8 @@
 package hellojpa;
 
+import hellojpa.domain.Member;
+import hellojpa.domain.Order;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -22,10 +25,7 @@ public class JpaMain {
         tx.begin();
         // code
         try{
-            Member member = new Member();
-            member.setId(1L);
-            member.setName("HelloA");
-            em.persist(member);
+
 
             tx.commit();
         } catch (Exception e){
@@ -33,7 +33,6 @@ public class JpaMain {
         } finally {
             em.close();
         }
-        System.out.println("tx = " + tx);
         emf.close();
     }
 }
