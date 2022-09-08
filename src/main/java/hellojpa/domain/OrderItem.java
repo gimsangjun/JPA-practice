@@ -6,15 +6,15 @@ import javax.persistence.*;
 public class OrderItem {
 
     @Id @GeneratedValue
-    @Column(name = "order_item_id")
+    @Column(name = "ORDER_ITEM_ID")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "ORDER_ID")
     private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "name_id")
+    @JoinColumn(name = "NAME_ID")
     private Item item;
 
     private int orderPrice;
